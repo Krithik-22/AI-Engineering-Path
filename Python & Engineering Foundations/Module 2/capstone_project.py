@@ -69,7 +69,11 @@ def display_student_result():
 
 while True:
     print(menu)
-    choice = int(input("Enter your choice: "))
+    try:
+        choice = int(input("Enter your choice: "))
+    except ValueError:
+         print("Invalid choice. Please enter a number.")
+         continue
 
     if choice == 1:
         student = input("Enter Student Name: ")
