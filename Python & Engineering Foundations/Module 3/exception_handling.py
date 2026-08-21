@@ -100,7 +100,7 @@ while True:
     name = input("Enter your Name: ")
     if len(name) == 0:
         print("Name cannot be empty")
-        pass
+        continue
     elif name.lower() != "exit":
         with open("attendance.txt",'a') as file:
             file.write(f"{name}\n")
